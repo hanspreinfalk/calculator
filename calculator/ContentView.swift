@@ -526,7 +526,7 @@ private struct CalculatorPressStyle: ButtonStyle {
         .contentShape(Circle())
         .scaleEffect(configuration.isPressed ? 1.11 : 1)
         .zIndex(configuration.isPressed ? 1 : 0)
-        .animation(.easeOut(duration: 0.07), value: configuration.isPressed)
+        .animation(.easeOut(duration: 0.17), value: configuration.isPressed)
         .animation(.linear(duration: 0.04), value: isSelected)
     }
 
