@@ -451,10 +451,12 @@ private enum CalculatorButton: Hashable {
     var fontSize: CGFloat {
         switch self {
         case .operation:
-            return 37
+            return 40
+        case .percent:
+            return 34
         case .equals:
             return 34
-        case .digit, .decimal, .sign, .clear, .percent:
+        case .digit, .decimal, .sign, .clear:
             return 30
         case .delete:
             return 26
@@ -524,7 +526,7 @@ private struct CalculatorPressStyle: ButtonStyle {
         .frame(width: size, height: size)
         .glassEffect(glassStyle(isPressed: configuration.isPressed), in: Circle())
         .contentShape(Circle())
-        .scaleEffect(configuration.isPressed ? 1.11 : 1)
+        .scaleEffect(configuration.isPressed ? 1.14 : 1)
         .zIndex(configuration.isPressed ? 1 : 0)
         .animation(.easeOut(duration: 0.17), value: configuration.isPressed)
         .animation(.linear(duration: 0.04), value: isSelected)
